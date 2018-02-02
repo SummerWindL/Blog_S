@@ -22,4 +22,4 @@ markdown
                                               --于2018 2 2
                                               
 
-![首页](Blog_S/img/index.png) 
+![首页](/img/index.png) 
