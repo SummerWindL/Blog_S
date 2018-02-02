@@ -24,26 +24,26 @@ markdown
 <hr>
 
 <h1>登录</h1>
-![登录](/img/signin.png)
+![登录](/img/signin.png);
 
 <hr>
 
-![提示](/img/toastr2.png)
+![提示](/img/toastr2.png);
 
 <hr>
 
-![提示](/img/toastr1.png)
+![提示](/img/toastr1.png);
 
 <hr>
 
 <h1>首页</h1>
-![首页](/img/index_noSignin.png) 
+![首页](/img/index_noSignin.png);
 
 <hr>
 
-![首页](/img/index.png) 
+![首页](/img/index.png);
 
 <hr>
 
 <h1>编辑</h1>
-![编辑](/img/toastr3.png) 
+![编辑](/img/toastr3.png);
