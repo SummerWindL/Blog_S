@@ -41,7 +41,7 @@ markdown
 <hr>
 
 <h1>编辑</h1>
-![编辑](/img/toastr3.png)
+![编辑](/img/edit.png)
 
 <h1>登录</h1>
 ![登录](/img/signin.png)
