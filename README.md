@@ -22,35 +22,28 @@ markdown
                                               --于2018 2 2
                                               
 <hr>
-[Signin]
+
+<h1>登录</h1>
 ![登录](/img/signin.png)
 
 <hr>
 
-[Prompt]
 ![提示](/img/toastr2.png)
 
 <hr>
 
-[Prompt]
 ![提示](/img/toastr1.png)
 
 <hr>
 
-[Prompt]
-![提示](/img/toastr2.png)
-
-<hr>
-
-[Index]
+<h1>首页</h1>
 ![首页](/img/index_noSignin.png) 
 
 <hr>
 
-[Index]
 ![首页](/img/index.png) 
 
 <hr>
 
-[Index]
+<h1>编辑</h1>
 ![编辑](/img/toastr3.png) 
