@@ -1,6 +1,8 @@
 # Blog_S
 use such as spring springmvc mybatis hibernate and so on
 
+请用JDK7运行本项目，不然会报错。
+
 目前项目还及不完善，自己尝试用了以下技术搭了一个简单的blog项目
 
 jsp
