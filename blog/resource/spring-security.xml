@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:sec="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+  <!-- Additional filter chain for normal users, matching all other requests -->
+	<sec:http auto-config="true">
+		<sec:intercept-url pattern="/Login.jsp*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+		<sec:intercept-url pattern="/**" access="ROLE_USER,ROLE_ADMIN" />
+		<sec:form-login login-page="/Login.jsp" 
+						default-target-url="/Welcome.jsp"		
+						/>
+		<sec:logout />
+	</sec:http>
+
+	<sec:authentication-manager>
+		<sec:authentication-provider>
+			<sec:user-service>
+				<sec:user name="admin" password="admin" authorities="ROLE_ADMIN" />
+			</sec:user-service>
+		</sec:authentication-provider>
+	</sec:authentication-manager>
+	
+	<!-- 如自定义登录页面必须将之权限需求设为空，否则将出现死循环 -->
+    <http pattern="/jsp/signin.jsp" security="none" />
+    <!-- 
+        1.access-denied-page:权限不足时跳转页面 ( ref属性可以设置跳转action ) 
+        2.use-expressions="true":开启表达式(推荐) PS:开启后非JAVA为文件写法
+
+为:hasRole('ROLE_USER')-->
+    <http use-expressions="true"  access-denied-page="/jsp/error/roleError.jsp">
+        <!-- 过滤地址 
+            pattern:路径 
+            access:权限 -->
+         <intercept-url pattern="/**" access="hasRole('ROLE_USER')" /> 
+        <!-- 登录配置 
+            1.login-processing-url:登录form中action的地址(默认
+
+为/j_spring_security_check) 
+            2.username-parameter:登录form中用户名的username(默认为/j_username) 
+            3.password-parameter:登录form中用户名的password(默认为/j_password) 
+            4.login-page:登录页(将覆盖默认登录页) 
+            5.default-target-url:默认登录后跳转的页面(如果登录前没有指定跳转页
+
+面将生效) 
+            6.authentication-failure-url:错误页 
+            7.always-use-default-target="true":登录后强制跳转到5所指定的页面 
+
+-->
+        <form-login 
+            login-processing-url="blog/pageController/login"
+            username-parameter="yanl.fu@sunyard.com" 
+            password-parameter="123"
+            login-page="/jsp/signin.jsp" 
+            default-target-url="/jsp/index.jsp"
+            authentication-failure-url="/jsp/signin.jsp?error=true"
+            always-use-default-target="true" />
+        <!-- 注销配置 1.logout-success-url:注销后跳转页面 -->
+        <logout logout-success-url="/views/login.jsp?logout=true" />
+    </http>
+    <!-- 使用jsr250注解保护方法 (例:com.exp.service.UserService.findAll) -->
+    <!-- <global-method-security jsr250-annotations="enabled" />
+    <authentication-manager>
+        手动配置权限列表。
+        PS: 1.实体bean必须实现 UserDetails接口，否则无法转换成正确类型
+            2.myUserDetailService该bean必须实现UserDetailsService接口并写好对应
+
+方法返回UserDetails类型
+        <authentication-provider user-service-ref='myUserDetailService' />
+    </authentication-manager> -->
+
+<!--	<bean id="userDetailsService" class="org.acegisecurity.userdetails.jdbc.JdbcDaoImpl">  -->
+<!--		  <property name="dataSource" ref="dataSource" />  -->
+<!--	</bean>  -->
+</beans>

@@ -1,0 +1,38 @@
+.editorform{
+	position:relative;
+	height:auto;
+	/* border: 2px solid green; */
+	padding-bottom: 90px;
+}
+.articleTitle{
+	margin-top: 90px;
+	/* border: 2px solid black; */
+	margin-bottom: 40px;
+}
+#title{
+	/* border: 2px solid gray; */
+	font-size:20px;
+	margin-left:62px;
+	margin-bottom:20px;
+	height: 10px;
+}
+
+.post{
+	float:right;
+	/* border: 2px solid red; */
+}
+
+.post{
+	margin:5px
+}
+
+.post{
+	margin-right: 80px;	
+}
+.green{
+	width: 40px;
+	height: 20px;
+}
+/* #test-editormd{
+	margin-bottom: 90px;
+} */

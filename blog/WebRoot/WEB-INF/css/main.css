@@ -1,0 +1,211 @@
+/*初始化页面*/
+html{
+    height: 100%;
+}
+body{
+	/* display: flex; */
+	padding: 0px;
+	margin: 0px;
+	flex-direction: column;
+    height: 100%;
+}
+/*head-标头*/
+.div1{
+	background: #292B2C;
+	/* border: 2px solid blue; */
+	height: 60px;
+	/*position: fixed;*/
+	/*margin: auto;
+	padding: calc();
+	width: 100px;*/
+}
+/*blog_name && blog_link*/
+.div1_1{
+	float: left;
+	padding-left: 89.5px;
+	padding-top:18px;
+	/*border: 2px solid brown;*/
+	height: 20px;
+	/*text-align: center;*/
+	line-height: 20px;
+}
+#blog_name{
+	/*border: 2px solid red;*/
+	font-family: "eras demi itc";
+	font-size: 20px;
+}
+#blog_link{
+	/*border: 2px solid red;*/
+	font-family: /*"bradley hand itc"*/"book antiqua";
+	font-style: italic;
+	font-size: smaller;
+}
+
+.div2{
+	height: 1307px;
+	/* height: auto; */
+	/* position: relative; */
+	padding-top:60px;
+	padding-left: 89.5px;
+	padding-right: 89.5px;
+	padding-bottom: auto;
+	/* border: 2px solid red; */
+	background-color: white;
+}
+.div2_1{
+	/* border: 2px solid blue; */
+	height: auto;
+	height: 100%;
+	padding-top: 3px;
+	margin: 0px;
+}
+.div2_1_1{
+	height: 836px;
+	padding-top: 10px;
+	width: 780px;
+	/* border: 2px solid green; */
+}
+.ul_1{
+	padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+}
+.ul_1_d{
+	float: right!important;
+	margin-top: -20px;
+	background-color:#636C72 ;
+}
+.label-default {
+    background-color: #777;
+}
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+.table{
+	height: auto;
+	position: relative;
+	overflow: hidden;
+}
+.content{
+	/* position: absolute; */
+	height:auto;
+	/* border: 2px solid pink; */
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.footer{
+    bottom: 0;
+    /* border: 2px solid red; */
+    width: 100%;
+    position:relative;
+    height: 120px;
+    background-color: #333;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.container{
+	padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.ul_2{
+	list-style: none;
+}
+.ul_1 li{
+	font-size: small;
+}
+
+.text-center .pagination{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem;
+}
+.pagination-lg .page-link {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+}
+
+.pagination-lg .page-item:first-child .page-link {
+  border-bottom-left-radius: 0.3rem;
+  border-top-left-radius: 0.3rem;
+}
+
+.pagination-lg .page-item:last-child .page-link {
+  border-bottom-right-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+
+.pagination-sm .page-link {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+.pagination-sm .page-item:first-child .page-link {
+  border-bottom-left-radius: 0.2rem;
+  border-top-left-radius: 0.2rem;
+}
+
+.pagination-sm .page-item:last-child .page-link {
+  border-bottom-right-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+}
+.div1_3{
+	/* border: 1px solid red; */
+	padding-top: 10px;
+	margin-right: 10px;
+}
+#nav_bar_1 {
+	float: right;
+}
+.div1_2{
+	float: right;
+	height: 20px;
+	margin-left: 20px;
+	padding-top: 16px;
+	padding-right: 80px;
+}
+#postArticle{
+	position:relative;
+	float: right;
+	margin-top: 30px;
+	margin-right:10px;
+}
+#selectOr{
+	float: right;
+	margin-top: 30px;
+	margin-right: 60px;
+}
+#accordion{
+	position:relative;
+	float: right;
+	margin-top: 90px;
+	margin-right:-151.5px;
+	/* border:2px solid red; */
+	width: 380px;
+}
+
